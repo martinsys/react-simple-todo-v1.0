@@ -8,6 +8,6 @@ Detail:
 - **Bootstrap 5.3.0**
 - **Localstorage**
 
-Code based on bluueweb [react course](https://www.udemy.com/course/curso-react-js/)
+Code based on [bluueweb](https://bluuweb.dev/)
 
-**© 2024 Todo v1.0 All rights reserved.**
+**© 2024 Remember that this code is only for learning.**
