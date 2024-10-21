@@ -1,0 +1,269 @@
+body{
+    background-color: #181824;
+}
+
+.body-dark {
+    height: 100%;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #181824;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.body-light {
+    height: 100%;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-theme, .light-theme {
+    transition: background-color 0.5s ease, color 0.5s ease; /* Transición para los temas */
+}
+
+.dark-theme {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    /*min-height: 100vh; !* Ocupa el 100% del alto disponible *!*/
+    background-color: #181824 !important; /* Fondo negro para el tema oscuro */
+    background-image: url('./assets/images/bg-desktop-dark.jpg');
+    background-position: top center; /* Fija la imagen en la parte superior */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Imagen con tamaño ajustado en la parte superior */
+    color: white;
+}
+
+.light-theme {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    /*min-height: 100vh; !* Ocupa el 100% del alto disponible *!*/
+    background-color: #3f3255 !important; /* Fondo blanco para el tema claro */
+    background-image: url('./assets/images/bg-desktop-light.jpg');
+    background-position: top center; /* Fija la imagen en la parte superior */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Imagen con tamaño ajustado en la parte superior */
+    color: black;
+}
+
+/* Estilos para otros componentes */
+.footer-controls, button, input, .icon-moon, h1, .input-dark, .input-light, .li-dark, .li-light, .computed-dark, .computed-light, .filter-dark, .filter-light {
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease; /* Transición para componentes */
+}
+
+@media (max-width: 768px) {
+    .dark-theme {
+        background-image: url('./assets/images/bg-mobile-dark.jpg');
+    }
+    .light-theme {
+        background-image: url('./assets/images/bg-mobile-light.jpg');
+    }
+}
+
+/* Estilos específicos para pie de página, botones, etc. */
+.footer-controls {
+    margin-top: auto;
+    width: 100%;
+    background-color: inherit; /* Usa el mismo color de fondo que el tema */
+    color: inherit; /* Usa el color de texto según el tema (blanco o negro) */
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-controls button, .footer-controls span {
+    color: inherit; /* Usa el color según el tema (blanco para oscuro, negro para claro) */
+}
+
+.footer-controls button {
+    background-color: transparent; /* Fondo por defecto */
+    border: none; /* Sin borde por defecto */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.footer-controls button:hover {
+    background-color: #621E83; /* Cambia el color de fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Otros estilos como el de botones, inputs, etc. */
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.icon-moon {
+    fill: currentColor; /* Utiliza el color actual del texto */
+    transition: fill 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Color del icono según el tema oscuro */
+.dark-theme .icon-moon {
+    color: white; /* Color blanco para el tema oscuro */
+}
+
+/* Color del icono según el tema claro */
+.light-theme .icon-moon {
+    color: black; /* Color negro para el tema claro */
+}
+
+/* Estilo para el título (h1) en el tema oscuro */
+.dark-theme h1 {
+    color: white; /* Color blanco para el tema oscuro */
+}
+
+/* Estilo para el título (h1) en el tema claro */
+.light-theme h1 {
+    color: white; /* Color negro para el tema claro */
+}
+
+.bg-dark-rounded{
+    background-color: #FFF/*#484C5C*/;
+    color: #000;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+}
+.list-group-item:first-child {
+    border-top: unset;
+}
+.fs-footer{
+    font-size: x-small;
+}
+.hover-active{
+    background-color: #621E83 !important; /* Cambia el color de fondo al pasar el mouse */
+    color: white !important; /* Cambia el color del texto al pasar el mouse */
+}
+.input-dark {
+    border: none;
+    background-color: #25273c;
+    color: #8f91aa;
+}
+.input-dark:focus {
+    background-color: #25273c; /* Mantener el mismo color de fondo cuando el input está en foco */
+    color: #8f91aa; /* Mantener el color del texto */
+    outline: none; /* Elimina el borde predeterminado del navegador en foco */
+    box-shadow: none; /* Evita el efecto de sombreado */
+}
+.input-light {
+    border: none;
+    background-color: #ffffff;
+    color: #9493a4;
+}
+.input-light:focus {
+    background-color: #ffffff; /* Mantener el color de fondo cuando está en foco */
+    color: #9493a4; /* Mantener el color del texto */
+    outline: none;
+    box-shadow: none;
+}
+
+.input-dark::placeholder {
+    color: #8f91aa;
+}
+
+.input-light::placeholder {
+    color: #9493a4;
+}
+.li-dark {
+    background-color: #25273c;
+    color: #8f91aa;
+    border-top: 1px solid #383a3a;
+    border-bottom: 1px solid #383a3a;
+    border-left: none;
+    border-right: none;
+
+}
+
+.li-light {
+    background-color: #ffffff;
+    color: #9493a4;
+    border-top: 1px solid #eaeaee;
+    border-bottom: 1px solid #eaeaee;
+    border-left: none;
+    border-right: none;
+}
+
+.computed-dark {
+    border: none;
+    background-color: #25273c; /* Color de fondo oscuro */
+    color: #8f91aa; /* Color del texto en modo oscuro */
+
+}
+
+.computed-light {
+    background-color: #ffffff; /* Color de fondo claro */
+    color: #9493a4; /* Color del texto en modo claro */
+    border: none; /* Borde superior claro */
+}
+
+.filter-dark {
+    background-color: #25273c; /* Color de fondo oscuro */
+    color: #8f91aa; /* Color del texto en modo oscuro */
+}
+
+.filter-light {
+    background-color: #ffffff; /* Color de fondo claro */
+    color: #9493a4; /* Color del texto en modo claro */
+}
+
+.hover-active {
+    font-weight: bold; /* Resalta la opción activa */
+    text-decoration: underline; /* Subraya el botón activo */
+}
+
+.footer-dark {
+    /*background-color: #25273c;*/ /* Fondo oscuro */
+    color: #8f91aa; /* Texto blanco para modo oscuro */
+}
+
+.footer-light {
+    /*background-color: #ffffff; !* Fondo claro *!*/
+    color: black; /* Texto negro para modo claro */
+}
+
+.fs-footer {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto en el footer */
+    opacity: 0.7; /* Añade un poco de transparencia */
+}
+
+.transition {
+    transition: background-color 0.5s ease, color 0.5s ease; /* Cambia la duración y el tipo de efecto según tus preferencias */
+}
+
+.app-container {
+    /* Aplica la clase de transición al contenedor principal */
+    &.light {
+        background-color: #ffffff; /* Color de fondo para el tema claro */
+        color: #000000; /* Color de texto para el tema claro */
+    }
+
+    &.dark {
+        background-color: #25273c; /* Color de fondo para el tema oscuro */
+        color: #ffffff; /* Color de texto para el tema oscuro */
+    }
+}
+
+.links-custom{
+    color: #8f91aa;
+    font-weight: bold;
+}
+
+.version{
+    font-size: 0.6rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+    }
+}
