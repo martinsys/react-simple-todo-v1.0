@@ -7,6 +7,7 @@ Detail:
 - **React 18.3.1** (Build only with props)
 - **Bootstrap 5.3.0**
 - **Localstorage**
+- **vite 5.4.8**
 
 Code based on [bluueweb](https://bluuweb.dev/)
 
