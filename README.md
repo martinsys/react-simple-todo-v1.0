@@ -1,5 +1,6 @@
 # Simple Todo v1.0 
 
+![Preview](./public/preview-image.png)
 
 ### This version of the code implements a simple todo without the use of drag and drop and without the use of list sorting.
 
